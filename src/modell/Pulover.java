@@ -1,25 +1,30 @@
 package modell;
 
-public class Pulover extends Ruha{
-    private double szinIntenzitas;
-
-    public Pulover(String tulNev) {
+public class Pulover extends Ruha{    
+    
+    private enum meretAllapot{BEBI, GYEREK, TINI, FELNOTT};
+    private meretAllapot meret;
+    
+    public Pulover(String tulNev, meretAllapot meret) {
         super(tulNev);
-        szinIntenzitas = 100;
+        this.meret = meret;
     }
-
-    public double getSzin() {
-        return szinIntenzitas;
+    
+    public void kimeloMosas(){
+        this.setTiszta();
     }
-
-    public void setSzin(double szinIntenzitas) {
-        this.szinIntenzitas = szinIntenzitas;
+    
+    public void mosas(){
+        while (meret.ordinal()>0) {            
+            meret = meretAllapot.values()[meret.ordinal()-1];
+        }
+        this.setTiszta();
     }
 
     @Override
     public String toString() {
         String os = super.toString();
-        return os + "\n\tIng{" + "szinIntenzitas=" + szinIntenzitas + '}';
+        return os + "\n\tPulover{" + "meret=" + meret + '}';
     }
 
     

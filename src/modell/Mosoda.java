@@ -53,16 +53,16 @@ public class Mosoda {
         }
     }
     
-    public void mos(){
+    public void mos(boolean kimelo){
         //if (uzemel) {
         if (allapot == UzemelesiAllapot.UZEMEL) {
             for (Ruha ruha : ruhak) {
                 if (ruha != null) {
-                    if (ruha instanceof Ing) {
+                    if (ruha instanceof Ing && kimelo) {
                         Ing ing = (Ing) ruha;
-                        ing.setSzin(ing.getSzin() * 0.97);
+                        ing.kimeloMosas();
                     }
-                    ruha.setTiszta(true);
+                    
                 }
             }
         } else {

@@ -21,10 +21,20 @@ public class Ruha {
         return tiszta;
     }
 
-    public void setTiszta(boolean tiszta) {
-        this.tiszta = tiszta;
+    public void kimeloMosas(){
+        setTiszta();
+    }
+    
+    public void mosas(){
+        setTiszta();
     }
 
+    public void setTiszta() {
+        this.tiszta = true;
+    }
+    
+    
+    
     @Override
     public String toString() {
         return "Ruha{" + "tulNeve=" + tulNeve + ", tiszta=" + tiszta + '}';

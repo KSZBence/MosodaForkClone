@@ -15,6 +15,18 @@ public class Ing extends Ruha{
     public void setSzin(double szinIntenzitas) {
         this.szinIntenzitas = szinIntenzitas;
     }
+    
+    public void kimeloMosas(){
+        this.szinIntenzitas = this.szinIntenzitas*0.985;
+        this.setTiszta();
+    }
+    
+    public void mosas(){
+        this.szinIntenzitas = this.szinIntenzitas*0.97;
+        this.setTiszta();
+    }
+    
+    
 
     @Override
     public String toString() {
