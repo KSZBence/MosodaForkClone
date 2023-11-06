@@ -25,7 +25,7 @@ public class MosodaProgram {
         System.out.println("--- mosoda ruhái 1. mosás UTÁN:");
         mosoda.mos();
         mosodaRuhai();
-        
+        mosoda.leEgett();
         System.out.println("--- mosoda ruhái 2. mosás UTÁN:");
         mosoda.mos();
         mosodaRuhai();
