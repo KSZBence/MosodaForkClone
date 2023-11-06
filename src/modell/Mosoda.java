@@ -22,7 +22,7 @@ public class Mosoda {
                 System.out.println("A mosoda megtelt!");
             }
         }else{
-            System.out.println("A mosoda leégett, nem lehet ruhákat beadni.");
+            nemUzemel();
         }
         
     }
@@ -53,8 +53,12 @@ public class Mosoda {
                 System.out.println("Nincs ilyen ruha a mosodában!");
             }
         } else {
-            System.out.println("A mosoda leégett, nem lehet ruhákat beadni.");
+            nemUzemel();
         }
+    }
+
+    private void nemUzemel() {
+        System.out.println("A mosoda leégett, nem lehet ruhákat beadni.");
     }
 
     public String[] getRuhak() {
