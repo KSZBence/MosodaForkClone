@@ -25,4 +25,10 @@ public class Ruha {
         this.tiszta = tiszta;
     }
 
+    @Override
+    public String toString() {
+        return "Ruha{" + "tulNeve=" + tulNeve + ", tiszta=" + tiszta + '}';
+    }
+
+    
 }
